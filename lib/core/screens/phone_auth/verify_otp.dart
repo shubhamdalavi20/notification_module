@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:notification_module/core/screens/home_screen.dart';
+import 'package:notification_module/screens/notification/list/notification_list.dart';
 
 class VerifyOtpScreen extends StatefulWidget {
   final String verificationId;

@@ -17,19 +17,14 @@ class Details extends StatelessWidget {
         title: Text(title),
       ),
       body: Container(
-        padding: const EdgeInsets.all(5),
+        padding: const EdgeInsets.all(10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            // Image.network(imageURL),
-            //const SizedBox(
-            //  height: 10,
-            //),
-            // Text(title),
-            //const SizedBox(
-            //  height: 10,
-            //),
-            Text(subTitle),
+            Text(
+              subTitle,
+              style: const TextStyle(fontWeight: FontWeight.w100),
+            ),
           ],
         ),
       ),
