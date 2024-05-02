@@ -25,11 +25,6 @@ class DatabaseService {
     _notificationRef.add(pn);
   }
 
-  Future<int> getNotificationsCount() async {
-    var snapshots = _notificationRef.orderBy("createdOn", descending: true).snapshots();
-    return snapshots.length;
-  }
-
   void updateNotification(String pnId, PushNotification pn) {
     _notificationRef.doc(pnId).update(pn.toJson());
   }

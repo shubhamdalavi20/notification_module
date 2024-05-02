@@ -1,4 +1,3 @@
-import 'package:badges/badges.dart' as badges;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +16,8 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final DatabaseService databaseService = DatabaseService();
-  
+  var notificationCount = 0;
+
   void logOut() async {
     await FirebaseAuth.instance.signOut();
     Navigator.popUntil(context, (route) => route.isFirst);
@@ -36,14 +36,11 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text("Home"),
         actions: [
-          badges.Badge(
-            badgeContent: Text(databaseService.getNotificationsCount().toString()), 
-            child: IconButton(
-              onPressed: () {
-                openNotificationList();
-              },
-              icon: const Icon(Icons.notifications),
-            ),
+          IconButton(
+            onPressed: () {
+              openNotificationList();
+            },
+            icon: const Icon(Icons.notifications),
           ),
           IconButton(
             onPressed: () {

@@ -23,7 +23,7 @@ class Details extends StatelessWidget {
           children: [
             Text(
               subTitle,
-              style: const TextStyle(fontWeight: FontWeight.w100),
+              style: const TextStyle(fontWeight: FontWeight.w400),
             ),
           ],
         ),
